@@ -9,21 +9,42 @@
 /* Begin PBXBuildFile section */
 		0FC47D622814411300D9999B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC47D612814411300D9999B /* AppDelegate.swift */; };
 		0FC47D642814411300D9999B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC47D632814411300D9999B /* SceneDelegate.swift */; };
-		0FC47D662814411300D9999B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC47D652814411300D9999B /* ViewController.swift */; };
+		0FC47D662814411300D9999B /* SchwannViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC47D652814411300D9999B /* SchwannViewController.swift */; };
 		0FC47D692814411300D9999B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FC47D672814411300D9999B /* Main.storyboard */; };
 		0FC47D6B2814411C00D9999B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FC47D6A2814411C00D9999B /* Assets.xcassets */; };
 		0FC47D6E2814411C00D9999B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FC47D6C2814411C00D9999B /* LaunchScreen.storyboard */; };
+		0FC47D782814435100D9999B /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC47D772814435100D9999B /* MainTableViewController.swift */; };
+		0FC47D7B281445D800D9999B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC47D7A281445D800D9999B /* ViewModel.swift */; };
+		0FC47D802814615700D9999B /* SegueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC47D7F2814615700D9999B /* SegueModel.swift */; };
+		0FC47D83281466AF00D9999B /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 0FC47D82281466AF00D9999B /* Lottie */; };
+		0FC47D8C28146DEF00D9999B /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC47D8B28146DEF00D9999B /* View+Extensions.swift */; };
+		0FC47D8E281470A900D9999B /* ResourceURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC47D8D281470A900D9999B /* ResourceURL.swift */; };
+		0FC47D9028147C5500D9999B /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC47D8F28147C5500D9999B /* CustomTabBarController.swift */; };
+		0FC47D9228147EC400D9999B /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC47D9128147EC400D9999B /* TaskViewController.swift */; };
+		0FC47D9428147ECF00D9999B /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC47D9328147ECF00D9999B /* CalendarViewController.swift */; };
+		0FC47D9628147F3200D9999B /* ViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC47D9528147F3200D9999B /* ViewControllerModel.swift */; };
+		0FE5CBD72814852500F02874 /* lottie-phone-json.json in Resources */ = {isa = PBXBuildFile; fileRef = 0FE5CBD62814852500F02874 /* lottie-phone-json.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0FC47D5E2814411300D9999B /* Dribbble Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dribbble Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FC47D612814411300D9999B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FC47D632814411300D9999B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0FC47D652814411300D9999B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0FC47D652814411300D9999B /* SchwannViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchwannViewController.swift; sourceTree = "<group>"; };
 		0FC47D682814411300D9999B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0FC47D6A2814411C00D9999B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0FC47D6D2814411C00D9999B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0FC47D6F2814411C00D9999B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FC47D772814435100D9999B /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		0FC47D7A281445D800D9999B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		0FC47D7F2814615700D9999B /* SegueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueModel.swift; sourceTree = "<group>"; };
+		0FC47D8B28146DEF00D9999B /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		0FC47D8D281470A900D9999B /* ResourceURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceURL.swift; sourceTree = "<group>"; };
+		0FC47D8F28147C5500D9999B /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		0FC47D9128147EC400D9999B /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		0FC47D9328147ECF00D9999B /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		0FC47D9528147F3200D9999B /* ViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerModel.swift; sourceTree = "<group>"; };
+		0FE5CBD62814852500F02874 /* lottie-phone-json.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "lottie-phone-json.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FC47D83281466AF00D9999B /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +78,81 @@
 		0FC47D602814411300D9999B /* Dribbble Project */ = {
 			isa = PBXGroup;
 			children = (
+				0FC47D772814435100D9999B /* MainTableViewController.swift */,
+				0FC47D8A28146DA900D9999B /* Extensions+Utilities */,
+				0FC47D762814416C00D9999B /* Schwann */,
+				0FC47D752814414100D9999B /* Supporting Files */,
+			);
+			path = "Dribbble Project";
+			sourceTree = "<group>";
+		};
+		0FC47D752814414100D9999B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				0FC47D612814411300D9999B /* AppDelegate.swift */,
 				0FC47D632814411300D9999B /* SceneDelegate.swift */,
-				0FC47D652814411300D9999B /* ViewController.swift */,
 				0FC47D672814411300D9999B /* Main.storyboard */,
 				0FC47D6A2814411C00D9999B /* Assets.xcassets */,
 				0FC47D6C2814411C00D9999B /* LaunchScreen.storyboard */,
 				0FC47D6F2814411C00D9999B /* Info.plist */,
 			);
-			path = "Dribbble Project";
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0FC47D762814416C00D9999B /* Schwann */ = {
+			isa = PBXGroup;
+			children = (
+				0FC47D87281467F100D9999B /* JSONAssets */,
+				0FC47D7E2814614000D9999B /* Models */,
+				0FC47D79281445C700D9999B /* ViewModels */,
+				0FC47D86281467B500D9999B /* ViewControllers */,
+			);
+			path = Schwann;
+			sourceTree = "<group>";
+		};
+		0FC47D79281445C700D9999B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				0FC47D7A281445D800D9999B /* ViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0FC47D7E2814614000D9999B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0FC47D7F2814615700D9999B /* SegueModel.swift */,
+				0FC47D9528147F3200D9999B /* ViewControllerModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0FC47D86281467B500D9999B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0FC47D8F28147C5500D9999B /* CustomTabBarController.swift */,
+				0FC47D652814411300D9999B /* SchwannViewController.swift */,
+				0FC47D9128147EC400D9999B /* TaskViewController.swift */,
+				0FC47D9328147ECF00D9999B /* CalendarViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0FC47D87281467F100D9999B /* JSONAssets */ = {
+			isa = PBXGroup;
+			children = (
+				0FC47D8D281470A900D9999B /* ResourceURL.swift */,
+				0FE5CBD62814852500F02874 /* lottie-phone-json.json */,
+			);
+			path = JSONAssets;
+			sourceTree = "<group>";
+		};
+		0FC47D8A28146DA900D9999B /* Extensions+Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				0FC47D8B28146DEF00D9999B /* View+Extensions.swift */,
+			);
+			path = "Extensions+Utilities";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +171,9 @@
 			dependencies = (
 			);
 			name = "Dribbble Project";
+			packageProductDependencies = (
+				0FC47D82281466AF00D9999B /* Lottie */,
+			);
 			productName = "Dribbble Project";
 			productReference = 0FC47D5E2814411300D9999B /* Dribbble Project.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +202,9 @@
 				Base,
 			);
 			mainGroup = 0FC47D552814411300D9999B;
+			packageReferences = (
+				0FC47D81281466AF00D9999B /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 0FC47D5F2814411300D9999B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FC47D6E2814411C00D9999B /* LaunchScreen.storyboard in Resources */,
+				0FE5CBD72814852500F02874 /* lottie-phone-json.json in Resources */,
 				0FC47D6B2814411C00D9999B /* Assets.xcassets in Resources */,
 				0FC47D692814411300D9999B /* Main.storyboard in Resources */,
 			);
@@ -138,9 +233,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FC47D662814411300D9999B /* ViewController.swift in Sources */,
+				0FC47D7B281445D800D9999B /* ViewModel.swift in Sources */,
+				0FC47D802814615700D9999B /* SegueModel.swift in Sources */,
+				0FC47D782814435100D9999B /* MainTableViewController.swift in Sources */,
+				0FC47D9428147ECF00D9999B /* CalendarViewController.swift in Sources */,
+				0FC47D662814411300D9999B /* SchwannViewController.swift in Sources */,
 				0FC47D622814411300D9999B /* AppDelegate.swift in Sources */,
 				0FC47D642814411300D9999B /* SceneDelegate.swift in Sources */,
+				0FC47D8C28146DEF00D9999B /* View+Extensions.swift in Sources */,
+				0FC47D9628147F3200D9999B /* ViewControllerModel.swift in Sources */,
+				0FC47D9228147EC400D9999B /* TaskViewController.swift in Sources */,
+				0FC47D8E281470A900D9999B /* ResourceURL.swift in Sources */,
+				0FC47D9028147C5500D9999B /* CustomTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,9 +320,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
+				NEW_SETTING = "";
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -270,9 +375,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				NEW_SETTING = "";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -289,7 +395,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2RH2V33K5A;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Dribbble Project/Info.plist";
+				INFOPLIST_FILE = "Dribbble Project/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -317,7 +423,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2RH2V33K5A;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Dribbble Project/Info.plist";
+				INFOPLIST_FILE = "Dribbble Project/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -358,6 +464,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0FC47D81281466AF00D9999B /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0FC47D82281466AF00D9999B /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0FC47D81281466AF00D9999B /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0FC47D562814411300D9999B /* Project object */;
 }
