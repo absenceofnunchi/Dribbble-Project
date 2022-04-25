@@ -24,6 +24,7 @@
 		0FC47D9428147ECF00D9999B /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC47D9328147ECF00D9999B /* CalendarViewController.swift */; };
 		0FC47D9628147F3200D9999B /* ViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC47D9528147F3200D9999B /* ViewControllerModel.swift */; };
 		0FE5CBD72814852500F02874 /* lottie-phone-json.json in Resources */ = {isa = PBXBuildFile; fileRef = 0FE5CBD62814852500F02874 /* lottie-phone-json.json */; };
+		0FFD364528172CB2009F962E /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD364428172CB2009F962E /* ProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		0FC47D9328147ECF00D9999B /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		0FC47D9528147F3200D9999B /* ViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerModel.swift; sourceTree = "<group>"; };
 		0FE5CBD62814852500F02874 /* lottie-phone-json.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "lottie-phone-json.json"; sourceTree = "<group>"; };
+		0FFD364428172CB2009F962E /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		0FC47D762814416C00D9999B /* Schwann */ = {
 			isa = PBXGroup;
 			children = (
+				0FFD364328172BDB009F962E /* Views */,
 				0FC47D87281467F100D9999B /* JSONAssets */,
 				0FC47D7E2814614000D9999B /* Models */,
 				0FC47D79281445C700D9999B /* ViewModels */,
@@ -153,6 +156,14 @@
 				0FC47D8B28146DEF00D9999B /* View+Extensions.swift */,
 			);
 			path = "Extensions+Utilities";
+			sourceTree = "<group>";
+		};
+		0FFD364328172BDB009F962E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0FFD364428172CB2009F962E /* ProgressView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +256,7 @@
 				0FC47D9228147EC400D9999B /* TaskViewController.swift in Sources */,
 				0FC47D8E281470A900D9999B /* ResourceURL.swift in Sources */,
 				0FC47D9028147C5500D9999B /* CustomTabBarController.swift in Sources */,
+				0FFD364528172CB2009F962E /* ProgressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

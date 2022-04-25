@@ -35,11 +35,11 @@ class CustomTabBarController: UITabBarController {
         guard let tabBar = self.tabBar as? CustomTabBar else { return }
         
         tabBar.didTapButton = { [unowned self] in
-            self.routeToCreateNewAd()
+            self.routeToCalendarVC()
         }
     }
     
-    func routeToCreateNewAd() {
+    func routeToCalendarVC() {
         let newPostVC = self.storyboard?.instantiateViewController(withIdentifier: ViewControllerName.CalendarViewController) as! CalendarViewController
         newPostVC.modalPresentationCapturesStatusBarAppearance = true
         self.present(newPostVC, animated: true, completion: nil)
