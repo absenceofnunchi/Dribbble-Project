@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F8D7FB52818FA52001D5533 /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8D7FB42818FA52001D5533 /* TextCell.swift */; };
+		0F8D7FB728190359001D5533 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8D7FB628190359001D5533 /* CategoryCollectionViewCell.swift */; };
 		0FC47D622814411300D9999B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC47D612814411300D9999B /* AppDelegate.swift */; };
 		0FC47D642814411300D9999B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC47D632814411300D9999B /* SceneDelegate.swift */; };
 		0FC47D662814411300D9999B /* SchwannViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC47D652814411300D9999B /* SchwannViewController.swift */; };
@@ -23,11 +25,14 @@
 		0FC47D9228147EC400D9999B /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC47D9128147EC400D9999B /* TaskViewController.swift */; };
 		0FC47D9428147ECF00D9999B /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC47D9328147ECF00D9999B /* CalendarViewController.swift */; };
 		0FC47D9628147F3200D9999B /* ViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC47D9528147F3200D9999B /* ViewControllerModel.swift */; };
+		0FC540AE2818DB5F0037BA68 /* TaskCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC540AC2818DB5F0037BA68 /* TaskCollectionViewCell.swift */; };
 		0FE5CBD72814852500F02874 /* lottie-phone-json.json in Resources */ = {isa = PBXBuildFile; fileRef = 0FE5CBD62814852500F02874 /* lottie-phone-json.json */; };
 		0FFD364528172CB2009F962E /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD364428172CB2009F962E /* ProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F8D7FB42818FA52001D5533 /* TextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
+		0F8D7FB628190359001D5533 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		0FC47D5E2814411300D9999B /* Dribbble Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dribbble Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FC47D612814411300D9999B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FC47D632814411300D9999B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +50,7 @@
 		0FC47D9128147EC400D9999B /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		0FC47D9328147ECF00D9999B /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		0FC47D9528147F3200D9999B /* ViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerModel.swift; sourceTree = "<group>"; };
+		0FC540AC2818DB5F0037BA68 /* TaskCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCollectionViewCell.swift; sourceTree = "<group>"; };
 		0FE5CBD62814852500F02874 /* lottie-phone-json.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "lottie-phone-json.json"; sourceTree = "<group>"; };
 		0FFD364428172CB2009F962E /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				0FC47D772814435100D9999B /* MainTableViewController.swift */,
+				0FC5409D2817800B0037BA68 /* CustomCells */,
 				0FC47D8A28146DA900D9999B /* Extensions+Utilities */,
 				0FC47D762814416C00D9999B /* Schwann */,
 				0FC47D752814414100D9999B /* Supporting Files */,
@@ -156,6 +163,16 @@
 				0FC47D8B28146DEF00D9999B /* View+Extensions.swift */,
 			);
 			path = "Extensions+Utilities";
+			sourceTree = "<group>";
+		};
+		0FC5409D2817800B0037BA68 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				0FC540AC2818DB5F0037BA68 /* TaskCollectionViewCell.swift */,
+				0F8D7FB628190359001D5533 /* CategoryCollectionViewCell.swift */,
+				0F8D7FB42818FA52001D5533 /* TextCell.swift */,
+			);
+			path = CustomCells;
 			sourceTree = "<group>";
 		};
 		0FFD364328172BDB009F962E /* Views */ = {
@@ -244,8 +261,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F8D7FB728190359001D5533 /* CategoryCollectionViewCell.swift in Sources */,
 				0FC47D7B281445D800D9999B /* ViewModel.swift in Sources */,
 				0FC47D802814615700D9999B /* SegueModel.swift in Sources */,
+				0FC540AE2818DB5F0037BA68 /* TaskCollectionViewCell.swift in Sources */,
 				0FC47D782814435100D9999B /* MainTableViewController.swift in Sources */,
 				0FC47D9428147ECF00D9999B /* CalendarViewController.swift in Sources */,
 				0FC47D662814411300D9999B /* SchwannViewController.swift in Sources */,
@@ -256,6 +275,7 @@
 				0FC47D9228147EC400D9999B /* TaskViewController.swift in Sources */,
 				0FC47D8E281470A900D9999B /* ResourceURL.swift in Sources */,
 				0FC47D9028147C5500D9999B /* CustomTabBarController.swift in Sources */,
+				0F8D7FB52818FA52001D5533 /* TextCell.swift in Sources */,
 				0FFD364528172CB2009F962E /* ProgressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
