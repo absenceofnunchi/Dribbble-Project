@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalendarCollectionViewController"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="calendar-cell-reusable-identifier" id="gTV-IL-0wX" customClass="CalendarCollectionViewCell" customModule="Dribbble_Project" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="80" height="100"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jEg-ic-TlF">
+                        <rect key="frame" x="0.0" y="0.0" width="80" height="100"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Week Day Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sLi-35-nhc" userLabel="WeekDayLabel">
+                                <rect key="frame" x="8" y="8" width="64" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ot8-af-UyD" userLabel="DateLabel">
+                                <rect key="frame" x="8" y="32" width="64" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ot8-af-UyD" firstAttribute="leading" secondItem="jEg-ic-TlF" secondAttribute="leading" constant="8" id="2aB-do-3Ei"/>
+                            <constraint firstAttribute="trailing" secondItem="sLi-35-nhc" secondAttribute="trailing" constant="8" id="4H9-21-mUZ"/>
+                            <constraint firstAttribute="trailing" secondItem="Ot8-af-UyD" secondAttribute="trailing" constant="8" id="98I-En-Xjw"/>
+                            <constraint firstItem="Ot8-af-UyD" firstAttribute="height" secondItem="jEg-ic-TlF" secondAttribute="height" multiplier="0.6" id="XhK-Xp-R4z"/>
+                            <constraint firstItem="sLi-35-nhc" firstAttribute="leading" secondItem="jEg-ic-TlF" secondAttribute="leading" constant="8" id="fio-dk-XSK"/>
+                            <constraint firstItem="sLi-35-nhc" firstAttribute="height" secondItem="jEg-ic-TlF" secondAttribute="height" multiplier="0.4" id="h0I-Oh-uUx"/>
+                            <constraint firstItem="sLi-35-nhc" firstAttribute="top" secondItem="jEg-ic-TlF" secondAttribute="top" constant="8" id="nh5-lo-8YJ"/>
+                            <constraint firstAttribute="bottom" secondItem="Ot8-af-UyD" secondAttribute="bottom" constant="8" id="ubs-Lp-nBb"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="jEg-ic-TlF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="7El-L7-WYQ"/>
+                <constraint firstAttribute="bottom" secondItem="jEg-ic-TlF" secondAttribute="bottom" id="7ei-cj-fB0"/>
+                <constraint firstItem="jEg-ic-TlF" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="AFf-qH-IB1"/>
+                <constraint firstAttribute="trailing" secondItem="jEg-ic-TlF" secondAttribute="trailing" id="DRQ-7D-lfY"/>
+            </constraints>
+            <size key="customSize" width="80" height="100"/>
+            <connections>
+                <outlet property="dateLabel" destination="Ot8-af-UyD" id="KoD-su-5MP"/>
+                <outlet property="weekDayLabel" destination="sLi-35-nhc" id="XQY-1b-upa"/>
+            </connections>
+            <point key="canvasLocation" x="153.62318840579712" y="81.696428571428569"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

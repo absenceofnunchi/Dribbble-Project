@@ -301,14 +301,45 @@
                     <view key="view" contentMode="scaleToFill" id="ed6-Sw-aGq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dIW-hm-jdh">
+                                <rect key="frame" x="20" y="88" width="374" height="134.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EVD-DT-YiK">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="mbZ-nQ-uW7">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dlq-9u-lSY" customClass="CalendarCollectionViewCell" customModule="Dribbble_Project" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="QbS-az-mzX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dIW-hm-jdh" firstAttribute="height" secondItem="ed6-Sw-aGq" secondAttribute="height" multiplier="0.15" id="5Ke-of-sJw"/>
+                            <constraint firstItem="dIW-hm-jdh" firstAttribute="top" secondItem="QbS-az-mzX" secondAttribute="top" id="nih-T7-1h0"/>
+                            <constraint firstItem="QbS-az-mzX" firstAttribute="trailing" secondItem="dIW-hm-jdh" secondAttribute="trailing" constant="20" id="qw6-us-da4"/>
+                            <constraint firstItem="dIW-hm-jdh" firstAttribute="leading" secondItem="QbS-az-mzX" secondAttribute="leading" constant="20" id="vh1-xd-Zau"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="FoI-sR-MB7"/>
+                    <connections>
+                        <outlet property="topCollectionView" destination="dIW-hm-jdh" id="Wgg-He-ncp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tWn-pc-rmW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3955" y="-1522"/>
+            <point key="canvasLocation" x="3953.6231884057975" y="-1522.0982142857142"/>
         </scene>
         <!--Main Table View Controller-->
         <scene sceneID="fks-sa-axi">

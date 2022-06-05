@@ -68,8 +68,12 @@ enum Section: Int, CaseIterable {
 class TaskViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var progressView: ProgressView!
+    
+    typealias Category = Section
+    typealias CategoryModel = SectionModel
+    
     var dataSource: UICollectionViewDiffableDataSource<Section, SectionModel>! = nil
-    let modelArray: [[SectionModel]] = [
+    var modelArray: [[SectionModel]]! = [
         [
             FirstSectionModel(section: .ongoingTasks, title: "Mobile UIKit", subTitle: "Odama Studio", progress: 76, days: 3),
             FirstSectionModel(section: .ongoingTasks, title: "Illustration", subTitle: "Paperpillar", progress: 82, days: 5),
@@ -93,13 +97,13 @@ class TaskViewController: UIViewController {
 }
 
 extension TaskViewController: UICollectionViewDelegate {
-    private func configureHierarchy() {
+    func configureHierarchy() {
         collectionView.collectionViewLayout = generateLayout()
         collectionView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
         collectionView.delegate = self
     }
     
-    private func configureDataSource() {
+    func configureDataSource() {
         let TaskCellRegistration = UICollectionView.CellRegistration<TaskCollectionViewCell, FirstSectionModel> { (cell, indexPath, sectionModel) in
             cell.titleLabel.text = sectionModel.title
             cell.moreSymbol.setImage(UIImage(systemName: "ellipsis")?.withTintColor(.lightGray, renderingMode: .alwaysOriginal), for: .normal)
@@ -151,9 +155,10 @@ extension TaskViewController: UICollectionViewDelegate {
     }
 }
 
-extension TaskViewController {
+extension TaskViewController: CollectionViewable {
+ 
     /// - Tag: PerSection
-    private func generateLayout() -> UICollectionViewLayout {
+    func generateLayout() -> UICollectionViewLayout {
         let layout = UICollectionViewCompositionalLayout { (sectionIndex: Int,
                                                             layoutEnvironment: NSCollectionLayoutEnvironment)
             -> NSCollectionLayoutSection? in
