@@ -10,7 +10,7 @@ import Lottie
 
 class SchwannViewController: UIViewController {
     var animationName: String!
-    private var animationView = AnimationView()
+    private var animationView = LottieAnimationView()
     @IBInspectable @IBOutlet weak var animationContainerView: UIView!
     
     override func viewDidLoad() {
@@ -21,7 +21,7 @@ class SchwannViewController: UIViewController {
     private func configureUI() {
         animationName = "lottie-phone-json"
 
-        let animation = Animation.named(animationName)
+        let animation = LottieAnimation.named(animationName)
         animationView.animation = animation
         animationView.contentMode = .scaleAspectFit
         animationContainerView.addSubview(animationView)
