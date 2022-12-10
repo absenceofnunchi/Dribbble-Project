@@ -95,9 +95,9 @@ class UIViewX: UIView {
         }
     }
     
-    // MARK: - Rotation
+    // MARK: - Transform
     
-    @objc @IBInspectable var rotationDegrees: CGFloat = 0 {
+    @IBInspectable public var rotationDegrees: CGFloat = 0 {
         didSet {
             transform = CGAffineTransform(rotationAngle: rotationDegrees / 180.0 * CGFloat.pi)
         }
