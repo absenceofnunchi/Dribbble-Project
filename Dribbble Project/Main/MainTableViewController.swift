@@ -9,32 +9,21 @@ import UIKit
 import Combine
 
 class MainTableViewController: UITableViewController {
-    private var dataSource: [String] = [
-        DesignName.schwann.rawValue
-    ]
+    private var dataSource: [String] = DesignName.allCases.map { $0.rawValue }
     private var viewModel = ViewModel()
     private var cancellables = Set<AnyCancellable>()
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        configureUI()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        /// Initialize the UI to 0 face detected upon load
         viewModel.actionSubject.send(.initialize)
     }
     
-
-    private func configureUI() {
-    }
-    
     private func configureCancellable() {
-        /// When face detect request returns obervations, the number of obervations updates the counter in view model, which in turn emits state effect to update the UI accordingly.
-
         viewModel.stateEffectSubject
             .sink { [weak self] (stateEffect) in
                 switch stateEffect {
@@ -69,19 +58,5 @@ class MainTableViewController: UITableViewController {
         let data = dataSource[indexPath.row]
         guard let designName = DesignName(rawValue: data) else { return }
         self.performSegue(withIdentifier: designName.segueName, sender: self)
-    }
-    
-    // This function is called before the segue
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-//        switch segue.identifier {
-//        case SegueModel.schwannSegue:
-//            guard let vc = segue.destination as? SchwannViewController else {
-//                return
-//            }
-//
-//        default:
-//            break
-//        }
     }
 }

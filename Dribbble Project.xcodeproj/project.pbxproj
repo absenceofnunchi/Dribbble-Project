@@ -32,6 +32,9 @@
 		0FC540AE2818DB5F0037BA68 /* TaskCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC540AC2818DB5F0037BA68 /* TaskCollectionViewCell.swift */; };
 		0FE5CBD72814852500F02874 /* lottie-phone-json.json in Resources */ = {isa = PBXBuildFile; fileRef = 0FE5CBD62814852500F02874 /* lottie-phone-json.json */; };
 		0FFD364528172CB2009F962E /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD364428172CB2009F962E /* ProgressView.swift */; };
+		1FA126E52944279C00225946 /* WellnessMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FA126E42944279C00225946 /* WellnessMain.storyboard */; };
+		1FA126E82944309A00225946 /* WellnessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA126E72944309A00225946 /* WellnessViewController.swift */; };
+		1FA126EB2944338A00225946 /* SchwannMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FA126EA2944338A00225946 /* SchwannMain.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +64,9 @@
 		0FC540AC2818DB5F0037BA68 /* TaskCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCollectionViewCell.swift; sourceTree = "<group>"; };
 		0FE5CBD62814852500F02874 /* lottie-phone-json.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "lottie-phone-json.json"; sourceTree = "<group>"; };
 		0FFD364428172CB2009F962E /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		1FA126E42944279C00225946 /* WellnessMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WellnessMain.storyboard; sourceTree = "<group>"; };
+		1FA126E72944309A00225946 /* WellnessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellnessViewController.swift; sourceTree = "<group>"; };
+		1FA126EA2944338A00225946 /* SchwannMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SchwannMain.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +100,10 @@
 		0FC47D602814411300D9999B /* Dribbble Project */ = {
 			isa = PBXGroup;
 			children = (
-				0FC47D772814435100D9999B /* MainTableViewController.swift */,
-				0FC47D8A28146DA900D9999B /* Extensions+Utilities */,
+				1FA126E92944314500225946 /* Main */,
+				1FA126E3294404C600225946 /* Wellness  */,
 				0FC47D762814416C00D9999B /* Schwann */,
+				0FC47D8A28146DA900D9999B /* Extensions+Utilities */,
 				0FC47D752814414100D9999B /* Supporting Files */,
 			);
 			path = "Dribbble Project";
@@ -130,7 +137,6 @@
 		0FC47D79281445C700D9999B /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				0FC47D7A281445D800D9999B /* ViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -138,7 +144,6 @@
 		0FC47D7E2814614000D9999B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				0FC47D7F2814615700D9999B /* SegueModel.swift */,
 				0FC47D9528147F3200D9999B /* ViewControllerModel.swift */,
 				0F8C43D7284CEE4700A438C4 /* VerticalGesture.swift */,
 			);
@@ -152,6 +157,7 @@
 				0FC47D652814411300D9999B /* SchwannViewController.swift */,
 				0FC47D9128147EC400D9999B /* TaskViewController.swift */,
 				0FC47D9328147ECF00D9999B /* CalendarViewController.swift */,
+				1FA126EA2944338A00225946 /* SchwannMain.storyboard */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -193,6 +199,33 @@
 				0FFD364428172CB2009F962E /* ProgressView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		1FA126E3294404C600225946 /* Wellness  */ = {
+			isa = PBXGroup;
+			children = (
+				1FA126E62944307B00225946 /* ViewControllers */,
+			);
+			path = "Wellness ";
+			sourceTree = "<group>";
+		};
+		1FA126E62944307B00225946 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1FA126E42944279C00225946 /* WellnessMain.storyboard */,
+				1FA126E72944309A00225946 /* WellnessViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1FA126E92944314500225946 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				0FC47D772814435100D9999B /* MainTableViewController.swift */,
+				0FC47D7A281445D800D9999B /* ViewModel.swift */,
+				0FC47D7F2814615700D9999B /* SegueModel.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +296,8 @@
 				0FE5CBD72814852500F02874 /* lottie-phone-json.json in Resources */,
 				0FC47D6B2814411C00D9999B /* Assets.xcassets in Resources */,
 				0F6D5773284CF41A00E685F6 /* CalendarCollectionViewCell.xib in Resources */,
+				1FA126E52944279C00225946 /* WellnessMain.storyboard in Resources */,
+				1FA126EB2944338A00225946 /* SchwannMain.storyboard in Resources */,
 				0FC47D692814411300D9999B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +312,7 @@
 				0F8C43DA284CF22F00A438C4 /* CollectionViewable+Protocol.swift in Sources */,
 				0F8D7FB728190359001D5533 /* CategoryCollectionViewCell.swift in Sources */,
 				0FC47D7B281445D800D9999B /* ViewModel.swift in Sources */,
+				1FA126E82944309A00225946 /* WellnessViewController.swift in Sources */,
 				0FC47D802814615700D9999B /* SegueModel.swift in Sources */,
 				0FC540AE2818DB5F0037BA68 /* TaskCollectionViewCell.swift in Sources */,
 				0FC47D782814435100D9999B /* MainTableViewController.swift in Sources */,

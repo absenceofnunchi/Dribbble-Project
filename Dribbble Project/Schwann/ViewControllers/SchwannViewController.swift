@@ -11,6 +11,7 @@ import Lottie
 class SchwannViewController: UIViewController {
     var animationName: String!
     private var animationView = LottieAnimationView()
+    @IBOutlet weak var closeButton: UIButton!
     @IBInspectable @IBOutlet weak var animationContainerView: UIView!
     
     override func viewDidLoad() {
@@ -26,7 +27,12 @@ class SchwannViewController: UIViewController {
         animationView.contentMode = .scaleAspectFit
         animationContainerView.addSubview(animationView)
         animationView.setFill()
+        
     }
     
+    @IBAction func closePressed(_ sender: Any) {
+        print("dismiss")
+        tabBarController?.dismiss(animated: true)
+    }
 }
 
