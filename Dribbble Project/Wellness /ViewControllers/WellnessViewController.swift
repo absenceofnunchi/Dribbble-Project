@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WellnessViewController: UIViewController {
+final class WellnessViewController: UIViewController {
 
     @IBOutlet weak var elementView1: UIView! /// top left "care about your" view
     @IBOutlet weak var stackView1: UIStackView!
@@ -16,11 +16,6 @@ class WellnessViewController: UIViewController {
     @IBOutlet weak var employeLabel: UILabel!
     @IBOutlet weak var buttonViewContainer: UIView!
     @IBOutlet weak var buttonView: UIView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        configureButton()
-    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -66,14 +61,11 @@ class WellnessViewController: UIViewController {
         })
     }
     
-    private func configureButton() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(tapped))
-        buttonViewContainer.addGestureRecognizer(tap)
-    }
-    
-    @objc func tapped() {
-        UIView.animate(withDuration: 1, delay: 0) { [weak self] in
+    @IBAction func tapped() {
+        UIView.animate(withDuration: 1) { [weak self] in
             self?.buttonView.transform = CGAffineTransform(translationX: 1000, y: 0)
+        } completion: { [weak self] _ in
+            self?.performSegue(withIdentifier: "employeeSegue", sender: self)
         }
     }
     
