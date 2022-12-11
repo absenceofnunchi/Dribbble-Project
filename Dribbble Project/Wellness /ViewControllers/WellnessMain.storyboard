@@ -17,11 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="heG-0G-pYm" userLabel="Container View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="heG-0G-pYm" userLabel="Container View 1">
                                 <rect key="frame" x="-50" y="123" width="294.66666666666669" height="300"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pUt-5L-f8Q" customClass="UIViewX" customModule="Dribbble_Project" customModuleProvider="target">
-                                        <rect key="frame" x="-26.544312446446952" y="-2.9591090686718928" width="347.75529155956059" height="305.91821813734373"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pUt-5L-f8Q" userLabel="ViewX 1" customClass="UIViewX" customModule="Dribbble_Project" customModuleProvider="target">
+                                        <rect key="frame" x="-26.544312446446945" y="-2.9591090686718928" width="347.75529155956059" height="305.91821813734373"/>
                                         <color key="backgroundColor" red="0.14901960784313725" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="220" id="Awj-2v-WxQ"/>
@@ -32,7 +32,29 @@
                                                 <real key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="25"/>
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EgA-TK-Gs0" userLabel="Bordered ViewX 1" customClass="UIViewX" customModule="Dribbble_Project" customModuleProvider="target">
+                                        <rect key="frame" x="-14.565090396799162" y="16.492161406952221" width="323.79684746026504" height="267.01567718609556"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="290" id="Uel-84-X8M"/>
+                                            <constraint firstAttribute="height" constant="220" id="sUg-Xy-63a"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.14901960780000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rotationDegrees">
+                                                <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
@@ -56,7 +78,9 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="EgA-TK-Gs0" firstAttribute="centerX" secondItem="heG-0G-pYm" secondAttribute="centerX" id="8BH-Fh-s0i"/>
                                     <constraint firstAttribute="trailing" secondItem="fFN-Db-arV" secondAttribute="trailing" constant="20" id="A2Z-Db-nhx"/>
+                                    <constraint firstItem="EgA-TK-Gs0" firstAttribute="centerY" secondItem="heG-0G-pYm" secondAttribute="centerY" id="Bbd-Sj-7Bx"/>
                                     <constraint firstItem="fFN-Db-arV" firstAttribute="top" secondItem="heG-0G-pYm" secondAttribute="top" constant="90" id="L1d-81-JqE"/>
                                     <constraint firstItem="pUt-5L-f8Q" firstAttribute="centerY" secondItem="heG-0G-pYm" secondAttribute="centerY" id="PFo-vB-Vah"/>
                                     <constraint firstAttribute="height" constant="300" id="PNO-O0-yg8"/>
@@ -75,22 +99,203 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Tu-aW-jUe" userLabel="Container View 2">
+                                <rect key="frame" x="263" y="103" width="150" height="150"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hUb-28-tLP" userLabel="ViewX 2" customClass="UIViewX" customModule="Dribbble_Project" customModuleProvider="target">
+                                        <rect key="frame" x="32.189110867544649" y="35.849364905389031" width="85.621778264910716" height="78.301270189221924"/>
+                                        <color key="backgroundColor" red="0.18431372549019609" green="0.35686274509803922" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="2eX-i0-T1g"/>
+                                            <constraint firstAttribute="width" constant="70" id="5T9-VC-mOQ"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rotationDegrees">
+                                                <real key="value" value="-30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6eo-8d-pKB" userLabel="Bordered ViewX 2" customClass="UIViewX" customModule="Dribbble_Project" customModuleProvider="target">
+                                        <rect key="frame" x="63.560254689351495" y="0.53697946395388385" width="82.879490621297037" height="70.926041072092232"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="S14-Dh-qDE"/>
+                                            <constraint firstAttribute="width" constant="70" id="utk-Z6-32b"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.92549019607843142" green="0.34509803921568627" blue="0.1764705882352941" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rotationDegrees">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="4SI-Nc-4KW"/>
+                                    <constraint firstAttribute="height" constant="150" id="5t6-Io-buZ"/>
+                                    <constraint firstItem="hUb-28-tLP" firstAttribute="centerY" secondItem="0Tu-aW-jUe" secondAttribute="centerY" id="MCd-M4-AjN"/>
+                                    <constraint firstItem="6eo-8d-pKB" firstAttribute="top" secondItem="0Tu-aW-jUe" secondAttribute="top" constant="11" id="lF4-67-p9F"/>
+                                    <constraint firstItem="hUb-28-tLP" firstAttribute="centerX" secondItem="0Tu-aW-jUe" secondAttribute="centerX" id="wTq-pq-f8c"/>
+                                    <constraint firstAttribute="trailing" secondItem="6eo-8d-pKB" secondAttribute="trailing" constant="10" id="xap-rR-s11"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZYg-6W-tRC" userLabel="Container View 3">
+                                <rect key="frame" x="0.0" y="473" width="294.66666666666669" height="100"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BPy-IX-Fiz" userLabel="ViewX 3" customClass="UIViewX" customModule="Dribbble_Project" customModuleProvider="target">
+                                        <rect key="frame" x="2.9571808972105722" y="-7.04281910278943" width="64.085638205578846" height="64.08563820557886"/>
+                                        <color key="backgroundColor" red="0.1843137255" green="0.35686274509999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="fdw-6Q-6PT"/>
+                                            <constraint firstAttribute="width" constant="50" id="vfs-Dw-M3Q"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rotationDegrees">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HSC-Ws-txh" userLabel="ViewX 4" customClass="UIViewX" customModule="Dribbble_Project" customModuleProvider="target">
+                                        <rect key="frame" x="61.044663944306173" y="-14.990248893790234" width="117.91067211138764" height="99.980497787580461"/>
+                                        <color key="backgroundColor" red="0.92549019610000005" green="0.34509803919999998" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="aEv-Z1-OP3"/>
+                                            <constraint firstAttribute="height" constant="70" id="ogA-xf-ozG"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rotationDegrees">
+                                                <real key="value" value="-20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="BPy-IX-Fiz" firstAttribute="leading" secondItem="ZYg-6W-tRC" secondAttribute="leading" constant="10" id="5dQ-ly-lii"/>
+                                    <constraint firstItem="BPy-IX-Fiz" firstAttribute="top" secondItem="ZYg-6W-tRC" secondAttribute="top" id="6Gr-Nh-OCm"/>
+                                    <constraint firstAttribute="height" constant="100" id="G6G-z1-dPk"/>
+                                    <constraint firstItem="HSC-Ws-txh" firstAttribute="top" secondItem="ZYg-6W-tRC" secondAttribute="top" id="tP5-ac-NFE"/>
+                                    <constraint firstItem="HSC-Ws-txh" firstAttribute="leading" secondItem="BPy-IX-Fiz" secondAttribute="trailing" constant="10" id="wu8-0A-BYP"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="employees" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="ysu-K4-5af">
+                                <rect key="frame" x="123" y="473" width="250" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="GsD-iV-ABh"/>
+                                    <constraint firstAttribute="height" constant="100" id="TeS-n6-xok"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VrS-TA-VmP" userLabel="button View Container" customClass="UIViewX" customModule="Dribbble_Project" customModuleProvider="target">
+                                <rect key="frame" x="20" y="723" width="403" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="get started" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JxH-Tl-2NY" userLabel="Button Label">
+                                        <rect key="frame" x="29.999999999999993" y="10" width="88.333333333333314" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iRo-Ay-yGT" userLabel="Button View" customClass="UIViewX" customModule="Dribbble_Project" customModuleProvider="target">
+                                        <rect key="frame" x="221.66666666666663" y="0.0" width="181.33333333333337" height="70"/>
+                                        <subviews>
+                                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right.2" translatesAutoresizingMaskIntoConstraints="NO" id="He4-qK-bgf">
+                                                <rect key="frame" x="20.000000000000028" y="0.0" width="128" height="70"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.14901960780000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="He4-qK-bgf" firstAttribute="leading" secondItem="iRo-Ay-yGT" secondAttribute="leading" constant="20" id="1KM-HP-ZVc"/>
+                                            <constraint firstItem="He4-qK-bgf" firstAttribute="top" secondItem="iRo-Ay-yGT" secondAttribute="top" id="SuO-LW-tRN"/>
+                                            <constraint firstAttribute="bottom" secondItem="He4-qK-bgf" secondAttribute="bottom" id="zGD-Zi-5GW"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="iRo-Ay-yGT" secondAttribute="trailing" id="2oM-aL-AUD"/>
+                                    <constraint firstAttribute="height" constant="70" id="9UC-YB-eaq"/>
+                                    <constraint firstItem="JxH-Tl-2NY" firstAttribute="leading" secondItem="VrS-TA-VmP" secondAttribute="leading" constant="30" id="Dw9-6F-G1T"/>
+                                    <constraint firstAttribute="bottom" secondItem="iRo-Ay-yGT" secondAttribute="bottom" id="Eug-dp-leI"/>
+                                    <constraint firstItem="iRo-Ay-yGT" firstAttribute="width" secondItem="VrS-TA-VmP" secondAttribute="width" multiplier="0.45" id="FeG-5u-QXr"/>
+                                    <constraint firstItem="JxH-Tl-2NY" firstAttribute="top" secondItem="VrS-TA-VmP" secondAttribute="top" constant="10" id="GcW-0k-G4k"/>
+                                    <constraint firstAttribute="bottom" secondItem="JxH-Tl-2NY" secondAttribute="bottom" constant="10" id="YgH-D2-Z3G"/>
+                                    <constraint firstItem="iRo-Ay-yGT" firstAttribute="top" secondItem="VrS-TA-VmP" secondAttribute="top" id="ehk-e7-NCU"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.14901960780000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ZYg-6W-tRC" firstAttribute="top" secondItem="heG-0G-pYm" secondAttribute="bottom" constant="50" id="IdW-ua-iiv"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="VrS-TA-VmP" secondAttribute="trailing" constant="-30" id="KSh-W7-fYj"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="VrS-TA-VmP" secondAttribute="bottom" constant="25" id="LbX-fF-avX"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="0Tu-aW-jUe" secondAttribute="trailing" constant="-20" id="SUw-tS-v28"/>
+                            <constraint firstItem="ysu-K4-5af" firstAttribute="top" secondItem="ZYg-6W-tRC" secondAttribute="top" id="X7X-RO-FbV"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ysu-K4-5af" secondAttribute="trailing" constant="20" id="c3s-AK-mDK"/>
                             <constraint firstItem="heG-0G-pYm" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.75" id="h8M-KG-T1m"/>
                             <constraint firstItem="heG-0G-pYm" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="hUM-Zs-b8i"/>
+                            <constraint firstItem="ZYg-6W-tRC" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="mMx-aZ-4XG"/>
+                            <constraint firstItem="0Tu-aW-jUe" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="sog-qm-htH"/>
                             <constraint firstItem="heG-0G-pYm" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="-50" id="tpF-so-yz7"/>
+                            <constraint firstItem="VrS-TA-VmP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="xcJ-w4-7On"/>
+                            <constraint firstItem="ZYg-6W-tRC" firstAttribute="width" secondItem="heG-0G-pYm" secondAttribute="width" id="yOS-bY-hHc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1iI-Jq-uey">
                         <barButtonItem key="rightBarButtonItem" image="xmark" catalog="system" id="AJm-jD-NBF" userLabel="Close Button Item">
+                            <color key="tintColor" red="0.14901960780000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="closePressed:" destination="Y6W-OH-hqX" id="8nP-6j-TYR"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="buttonView" destination="iRo-Ay-yGT" id="f4w-Qc-oCJ"/>
+                        <outlet property="buttonViewContainer" destination="VrS-TA-VmP" id="wbA-Ug-KIm"/>
+                        <outlet property="elementView1" destination="heG-0G-pYm" id="WTa-65-L5j"/>
+                        <outlet property="elementView2" destination="0Tu-aW-jUe" id="sbq-Tg-7nA"/>
+                        <outlet property="elementView3" destination="ZYg-6W-tRC" id="Ljd-fV-hZz"/>
+                        <outlet property="employeLabel" destination="ysu-K4-5af" id="3Rz-qy-jeO"/>
+                        <outlet property="stackView1" destination="fFN-Db-arV" id="dhV-j5-Li7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -116,6 +321,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.right.2" width="128" height="128"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

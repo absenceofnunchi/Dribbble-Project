@@ -116,7 +116,6 @@
 			children = (
 				0FC47D612814411300D9999B /* AppDelegate.swift */,
 				0FC47D632814411300D9999B /* SceneDelegate.swift */,
-				0FC47D672814411300D9999B /* Main.storyboard */,
 				0FC47D6A2814411C00D9999B /* Assets.xcassets */,
 				0FC47D6C2814411C00D9999B /* LaunchScreen.storyboard */,
 				0FC47D6F2814411C00D9999B /* Info.plist */,
@@ -176,6 +175,7 @@
 		0FC47D8A28146DA900D9999B /* Extensions+Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				1F1934FA2944BD5900F6984C /* DesignableX */,
 				0FC47D8B28146DEF00D9999B /* View+Extensions.swift */,
 				0F8C43D9284CF22F00A438C4 /* CollectionViewable+Protocol.swift */,
 			);
@@ -206,7 +206,6 @@
 		1F1934F729443E7500F6984C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1F1934FA2944BD5900F6984C /* DesignableX */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -243,6 +242,7 @@
 				0FC47D772814435100D9999B /* MainTableViewController.swift */,
 				0FC47D7A281445D800D9999B /* ViewModel.swift */,
 				0FC47D7F2814615700D9999B /* SegueModel.swift */,
+				0FC47D672814411300D9999B /* Main.storyboard */,
 			);
 			path = Main;
 			sourceTree = "<group>";
