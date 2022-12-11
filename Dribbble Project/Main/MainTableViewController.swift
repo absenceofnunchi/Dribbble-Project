@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 
-class MainTableViewController: UITableViewController {
+final class MainTableViewController: UITableViewController {
     private var dataSource: [String] = DesignName.allCases.map { $0.rawValue }
     private var viewModel = ViewModel()
     private var cancellables = Set<AnyCancellable>()

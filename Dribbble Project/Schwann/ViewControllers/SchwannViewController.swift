@@ -8,7 +8,7 @@
 import UIKit
 import Lottie
 
-class SchwannViewController: UIViewController {
+final class SchwannViewController: UIViewController {
     var animationName: String!
     private var animationView = LottieAnimationView()
     @IBOutlet weak var closeButton: UIButton!

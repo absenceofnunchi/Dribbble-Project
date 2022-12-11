@@ -33,9 +33,15 @@
 		0FE5CBD72814852500F02874 /* lottie-phone-json.json in Resources */ = {isa = PBXBuildFile; fileRef = 0FE5CBD62814852500F02874 /* lottie-phone-json.json */; };
 		0FFD364528172CB2009F962E /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD364428172CB2009F962E /* ProgressView.swift */; };
 		1F1934F92944BD1400F6984C /* UIViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1934F82944BD1400F6984C /* UIViewX.swift */; };
+		1F7B026B29468D0800905B3E /* UILabelX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7B026A29468D0800905B3E /* UILabelX.swift */; };
 		1FA126E52944279C00225946 /* WellnessMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FA126E42944279C00225946 /* WellnessMain.storyboard */; };
 		1FA126E82944309A00225946 /* WellnessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA126E72944309A00225946 /* WellnessViewController.swift */; };
 		1FA126EB2944338A00225946 /* SchwannMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FA126EA2944338A00225946 /* SchwannMain.storyboard */; };
+		1FBEE0232945769F001DA61A /* EmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBEE0222945769F001DA61A /* EmployeeViewController.swift */; };
+		1FBEE025294576AE001DA61A /* Employee.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FBEE024294576AE001DA61A /* Employee.storyboard */; };
+		1FBEE02729457E6F001DA61A /* EmployeeSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBEE02629457E6F001DA61A /* EmployeeSegue.swift */; };
+		1FBEE02929457F4F001DA61A /* EmployeeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBEE02829457F4F001DA61A /* EmployeeAnimator.swift */; };
+		1FBEE02B29468129001DA61A /* UIStackViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBEE02A29468129001DA61A /* UIStackViewX.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,9 +72,15 @@
 		0FE5CBD62814852500F02874 /* lottie-phone-json.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "lottie-phone-json.json"; sourceTree = "<group>"; };
 		0FFD364428172CB2009F962E /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		1F1934F82944BD1400F6984C /* UIViewX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewX.swift; sourceTree = "<group>"; };
+		1F7B026A29468D0800905B3E /* UILabelX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelX.swift; sourceTree = "<group>"; };
 		1FA126E42944279C00225946 /* WellnessMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WellnessMain.storyboard; sourceTree = "<group>"; };
 		1FA126E72944309A00225946 /* WellnessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellnessViewController.swift; sourceTree = "<group>"; };
 		1FA126EA2944338A00225946 /* SchwannMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SchwannMain.storyboard; sourceTree = "<group>"; };
+		1FBEE0222945769F001DA61A /* EmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewController.swift; sourceTree = "<group>"; };
+		1FBEE024294576AE001DA61A /* Employee.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Employee.storyboard; sourceTree = "<group>"; };
+		1FBEE02629457E6F001DA61A /* EmployeeSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeSegue.swift; sourceTree = "<group>"; };
+		1FBEE02829457F4F001DA61A /* EmployeeAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAnimator.swift; sourceTree = "<group>"; };
+		1FBEE02A29468129001DA61A /* UIStackViewX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewX.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +226,8 @@
 			isa = PBXGroup;
 			children = (
 				1F1934F82944BD1400F6984C /* UIViewX.swift */,
+				1FBEE02A29468129001DA61A /* UIStackViewX.swift */,
+				1F7B026A29468D0800905B3E /* UILabelX.swift */,
 			);
 			path = DesignableX;
 			sourceTree = "<group>";
@@ -223,6 +237,8 @@
 			children = (
 				1F1934F729443E7500F6984C /* Views */,
 				1FA126E62944307B00225946 /* ViewControllers */,
+				1FBEE02629457E6F001DA61A /* EmployeeSegue.swift */,
+				1FBEE02829457F4F001DA61A /* EmployeeAnimator.swift */,
 			);
 			path = "Wellness ";
 			sourceTree = "<group>";
@@ -232,6 +248,8 @@
 			children = (
 				1FA126E42944279C00225946 /* WellnessMain.storyboard */,
 				1FA126E72944309A00225946 /* WellnessViewController.swift */,
+				1FBEE024294576AE001DA61A /* Employee.storyboard */,
+				1FBEE0222945769F001DA61A /* EmployeeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -313,6 +331,7 @@
 			files = (
 				0FC47D6E2814411C00D9999B /* LaunchScreen.storyboard in Resources */,
 				0FE5CBD72814852500F02874 /* lottie-phone-json.json in Resources */,
+				1FBEE025294576AE001DA61A /* Employee.storyboard in Resources */,
 				0FC47D6B2814411C00D9999B /* Assets.xcassets in Resources */,
 				0F6D5773284CF41A00E685F6 /* CalendarCollectionViewCell.xib in Resources */,
 				1FA126E52944279C00225946 /* WellnessMain.storyboard in Resources */,
@@ -330,6 +349,7 @@
 			files = (
 				0F8C43DA284CF22F00A438C4 /* CollectionViewable+Protocol.swift in Sources */,
 				0F8D7FB728190359001D5533 /* CategoryCollectionViewCell.swift in Sources */,
+				1FBEE02B29468129001DA61A /* UIStackViewX.swift in Sources */,
 				0FC47D7B281445D800D9999B /* ViewModel.swift in Sources */,
 				1FA126E82944309A00225946 /* WellnessViewController.swift in Sources */,
 				0FC47D802814615700D9999B /* SegueModel.swift in Sources */,
@@ -343,9 +363,13 @@
 				0F6D5772284CF41A00E685F6 /* CalendarCollectionViewCell.swift in Sources */,
 				0FC47D8C28146DEF00D9999B /* View+Extensions.swift in Sources */,
 				0FC47D9628147F3200D9999B /* ViewControllerModel.swift in Sources */,
+				1FBEE02729457E6F001DA61A /* EmployeeSegue.swift in Sources */,
 				0FC47D9228147EC400D9999B /* TaskViewController.swift in Sources */,
+				1FBEE02929457F4F001DA61A /* EmployeeAnimator.swift in Sources */,
 				0FC47D8E281470A900D9999B /* ResourceURL.swift in Sources */,
 				0FC47D9028147C5500D9999B /* CustomTabBarController.swift in Sources */,
+				1F7B026B29468D0800905B3E /* UILabelX.swift in Sources */,
+				1FBEE0232945769F001DA61A /* EmployeeViewController.swift in Sources */,
 				0F8D7FB52818FA52001D5533 /* TextCell.swift in Sources */,
 				0FFD364528172CB2009F962E /* ProgressView.swift in Sources */,
 				0F8C43D8284CEE4700A438C4 /* VerticalGesture.swift in Sources */,

@@ -20,8 +20,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="heG-0G-pYm" userLabel="Container View 1">
                                 <rect key="frame" x="-50" y="123" width="294.66666666666669" height="300"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pUt-5L-f8Q" userLabel="ViewX 1" customClass="UIViewX" customModule="Dribbble_Project" customModuleProvider="target">
-                                        <rect key="frame" x="-26.544312446446945" y="-2.9591090686718928" width="347.75529155956059" height="305.91821813734373"/>
+                                    <view tag="100" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pUt-5L-f8Q" userLabel="ViewX 1" customClass="UIViewX" customModule="Dribbble_Project" customModuleProvider="target">
+                                        <rect key="frame" x="-26.544312446446945" y="-2.9591090686718928" width="347.75529155956065" height="305.91821813734373"/>
                                         <color key="backgroundColor" red="0.14901960784313725" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="220" id="Awj-2v-WxQ"/>
@@ -37,7 +37,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EgA-TK-Gs0" userLabel="Bordered ViewX 1" customClass="UIViewX" customModule="Dribbble_Project" customModuleProvider="target">
-                                        <rect key="frame" x="-14.565090396799162" y="16.492161406952221" width="323.79684746026504" height="267.01567718609556"/>
+                                        <rect key="frame" x="-14.565090396799164" y="16.492161406952221" width="323.7968474602651" height="267.01567718609556"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="290" id="Uel-84-X8M"/>
@@ -155,7 +155,7 @@
                                 <rect key="frame" x="0.0" y="473" width="294.66666666666669" height="100"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BPy-IX-Fiz" userLabel="ViewX 3" customClass="UIViewX" customModule="Dribbble_Project" customModuleProvider="target">
-                                        <rect key="frame" x="2.9571808972105722" y="-7.04281910278943" width="64.085638205578846" height="64.08563820557886"/>
+                                        <rect key="frame" x="2.9571808972105718" y="-7.04281910278943" width="64.085638205578846" height="64.08563820557886"/>
                                         <color key="backgroundColor" red="0.1843137255" green="0.35686274509999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="fdw-6Q-6PT"/>
@@ -218,18 +218,7 @@
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iRo-Ay-yGT" userLabel="Button View" customClass="UIViewX" customModule="Dribbble_Project" customModuleProvider="target">
                                         <rect key="frame" x="221.66666666666663" y="0.0" width="181.33333333333337" height="70"/>
-                                        <subviews>
-                                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right.2" translatesAutoresizingMaskIntoConstraints="NO" id="He4-qK-bgf">
-                                                <rect key="frame" x="20.000000000000028" y="0.0" width="128" height="70"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </imageView>
-                                        </subviews>
                                         <color key="backgroundColor" red="0.14901960780000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="He4-qK-bgf" firstAttribute="leading" secondItem="iRo-Ay-yGT" secondAttribute="leading" constant="20" id="1KM-HP-ZVc"/>
-                                            <constraint firstItem="He4-qK-bgf" firstAttribute="top" secondItem="iRo-Ay-yGT" secondAttribute="top" id="SuO-LW-tRN"/>
-                                            <constraint firstAttribute="bottom" secondItem="He4-qK-bgf" secondAttribute="bottom" id="zGD-Zi-5GW"/>
-                                        </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="30"/>
@@ -238,6 +227,7 @@
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="iRo-Ay-yGT" secondAttribute="trailing" id="2oM-aL-AUD"/>
                                     <constraint firstAttribute="height" constant="70" id="9UC-YB-eaq"/>
@@ -259,6 +249,9 @@
                                         <color key="value" red="0.14901960780000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="qgj-OK-L1Y" appends="YES" id="q2Z-gF-c6Q"/>
+                                </connections>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -295,11 +288,27 @@
                         <outlet property="elementView3" destination="ZYg-6W-tRC" id="Ljd-fV-hZz"/>
                         <outlet property="employeLabel" destination="ysu-K4-5af" id="3Rz-qy-jeO"/>
                         <outlet property="stackView1" destination="fFN-Db-arV" id="dhV-j5-Li7"/>
+                        <segue destination="lHU-E3-1VE" kind="presentation" identifier="employeeSegue" customClass="EmployeeSegue" customModule="Dribbble_Project" customModuleProvider="target" modalPresentationStyle="fullScreen" id="sfZ-Z6-5hH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="qgj-OK-L1Y">
+                    <connections>
+                        <action selector="tapped" destination="Y6W-OH-hqX" id="l8Z-pm-aaX"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1057.2519083969464" y="-34.507042253521128"/>
+        </scene>
+        <!--EmployeeViewController-->
+        <scene sceneID="NIM-Ce-h0l">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="EmployeeViewController" storyboardName="Employee" referencedIdentifier="EmployeeViewController" id="lHU-E3-1VE" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="veP-pO-zph"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yDj-2z-c59" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1745" y="-35"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gHd-3e-Qfo">
@@ -321,7 +330,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="chevron.right.2" width="128" height="128"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
