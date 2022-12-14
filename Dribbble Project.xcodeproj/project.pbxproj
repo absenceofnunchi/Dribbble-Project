@@ -33,6 +33,9 @@
 		0FE5CBD72814852500F02874 /* lottie-phone-json.json in Resources */ = {isa = PBXBuildFile; fileRef = 0FE5CBD62814852500F02874 /* lottie-phone-json.json */; };
 		0FFD364528172CB2009F962E /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD364428172CB2009F962E /* ProgressView.swift */; };
 		1F1934F92944BD1400F6984C /* UIViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1934F82944BD1400F6984C /* UIViewX.swift */; };
+		1F2385DD29494F480064B172 /* UIImageViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2385DC29494F480064B172 /* UIImageViewX.swift */; };
+		1F45911D2948446500AF1D17 /* DatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F45911B2948446500AF1D17 /* DatingViewController.swift */; };
+		1F45911E2948446500AF1D17 /* DatingMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F45911C2948446500AF1D17 /* DatingMain.storyboard */; };
 		1F7B026B29468D0800905B3E /* UILabelX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7B026A29468D0800905B3E /* UILabelX.swift */; };
 		1FA126E52944279C00225946 /* WellnessMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FA126E42944279C00225946 /* WellnessMain.storyboard */; };
 		1FA126E82944309A00225946 /* WellnessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA126E72944309A00225946 /* WellnessViewController.swift */; };
@@ -72,6 +75,9 @@
 		0FE5CBD62814852500F02874 /* lottie-phone-json.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "lottie-phone-json.json"; sourceTree = "<group>"; };
 		0FFD364428172CB2009F962E /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		1F1934F82944BD1400F6984C /* UIViewX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewX.swift; sourceTree = "<group>"; };
+		1F2385DC29494F480064B172 /* UIImageViewX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewX.swift; sourceTree = "<group>"; };
+		1F45911B2948446500AF1D17 /* DatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatingViewController.swift; sourceTree = "<group>"; };
+		1F45911C2948446500AF1D17 /* DatingMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DatingMain.storyboard; sourceTree = "<group>"; };
 		1F7B026A29468D0800905B3E /* UILabelX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelX.swift; sourceTree = "<group>"; };
 		1FA126E42944279C00225946 /* WellnessMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WellnessMain.storyboard; sourceTree = "<group>"; };
 		1FA126E72944309A00225946 /* WellnessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellnessViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				1FA126E92944314500225946 /* Main */,
+				1F45911A2948446500AF1D17 /* Video Dating App */,
 				1FA126E3294404C600225946 /* Wellness  */,
 				0FC47D762814416C00D9999B /* Schwann */,
 				0FC47D8A28146DA900D9999B /* Extensions+Utilities */,
@@ -228,8 +235,18 @@
 				1F1934F82944BD1400F6984C /* UIViewX.swift */,
 				1FBEE02A29468129001DA61A /* UIStackViewX.swift */,
 				1F7B026A29468D0800905B3E /* UILabelX.swift */,
+				1F2385DC29494F480064B172 /* UIImageViewX.swift */,
 			);
 			path = DesignableX;
+			sourceTree = "<group>";
+		};
+		1F45911A2948446500AF1D17 /* Video Dating App */ = {
+			isa = PBXGroup;
+			children = (
+				1F45911B2948446500AF1D17 /* DatingViewController.swift */,
+				1F45911C2948446500AF1D17 /* DatingMain.storyboard */,
+			);
+			path = "Video Dating App";
 			sourceTree = "<group>";
 		};
 		1FA126E3294404C600225946 /* Wellness  */ = {
@@ -334,6 +351,7 @@
 				1FBEE025294576AE001DA61A /* Employee.storyboard in Resources */,
 				0FC47D6B2814411C00D9999B /* Assets.xcassets in Resources */,
 				0F6D5773284CF41A00E685F6 /* CalendarCollectionViewCell.xib in Resources */,
+				1F45911E2948446500AF1D17 /* DatingMain.storyboard in Resources */,
 				1FA126E52944279C00225946 /* WellnessMain.storyboard in Resources */,
 				1FA126EB2944338A00225946 /* SchwannMain.storyboard in Resources */,
 				0FC47D692814411300D9999B /* Main.storyboard in Resources */,
@@ -352,6 +370,7 @@
 				1FBEE02B29468129001DA61A /* UIStackViewX.swift in Sources */,
 				0FC47D7B281445D800D9999B /* ViewModel.swift in Sources */,
 				1FA126E82944309A00225946 /* WellnessViewController.swift in Sources */,
+				1F2385DD29494F480064B172 /* UIImageViewX.swift in Sources */,
 				0FC47D802814615700D9999B /* SegueModel.swift in Sources */,
 				1F1934F92944BD1400F6984C /* UIViewX.swift in Sources */,
 				0FC540AE2818DB5F0037BA68 /* TaskCollectionViewCell.swift in Sources */,
@@ -373,6 +392,7 @@
 				0F8D7FB52818FA52001D5533 /* TextCell.swift in Sources */,
 				0FFD364528172CB2009F962E /* ProgressView.swift in Sources */,
 				0F8C43D8284CEE4700A438C4 /* VerticalGesture.swift in Sources */,
+				1F45911D2948446500AF1D17 /* DatingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

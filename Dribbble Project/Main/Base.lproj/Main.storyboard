@@ -35,6 +35,7 @@
                     <connections>
                         <segue destination="uiL-vK-bbm" kind="presentation" identifier="wellnessSegue" modalPresentationStyle="fullScreen" id="QWy-Fo-Vtg"/>
                         <segue destination="E6j-sB-jkJ" kind="presentation" identifier="schwannSegue" modalPresentationStyle="fullScreen" id="uma-wN-9jV"/>
+                        <segue destination="cu6-9b-pKZ" kind="presentation" identifier="datingSegue" modalPresentationStyle="fullScreen" id="lWk-Gx-oXe"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2aJ-Ub-WDD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -67,7 +68,15 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UIi-NQ-FfX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1750" y="-413"/>
+            <point key="canvasLocation" x="1762" y="-577"/>
+        </scene>
+        <!--DatingNavViewController-->
+        <scene sceneID="4LI-ev-wDC">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="DatingNavViewController" storyboardName="DatingMain" referencedIdentifier="DatingNavViewController" id="cu6-9b-pKZ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t7K-hc-UWh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1754" y="-434"/>
         </scene>
         <!--CustomTabBarController-->
         <scene sceneID="Le7-0S-zRq">
