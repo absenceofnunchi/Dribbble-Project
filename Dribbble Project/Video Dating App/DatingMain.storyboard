@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -78,10 +79,10 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wa9-ss-WfM" customClass="UIViewX" customModule="Dribbble_Project" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="111" height="85.333333333333329"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HtP-u0-MZ5" customClass="UIButtonX" customModule="Dribbble_Project" customModuleProvider="target">
-                                                <rect key="frame" x="44" y="25.666666666666629" width="38" height="35"/>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Snn-GH-plA" customClass="UIButtonX" customModule="Dribbble_Project" customModuleProvider="target">
+                                                <rect key="frame" x="38" y="25.666666666666629" width="38" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
@@ -92,6 +93,9 @@
                                                         <real key="value" value="10"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="bottomXpressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fXy-pt-pUN"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -128,7 +132,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uir-7t-woH">
                                         <rect key="frame" x="222" y="0.0" width="111" height="85.333333333333329"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Suv-Im-ZFN" customClass="UIButtonX" customModule="Dribbble_Project" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Suv-Im-ZFN" customClass="UIButtonX">
                                                 <rect key="frame" x="36" y="24.666666666666629" width="42" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -168,9 +172,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Lv1-xW-X7U">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="line.3.horizontal.decrease" catalog="system" id="1aT-u7-dNp">
-                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="xmark" catalog="system" id="pk5-vE-Ze2">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -180,14 +181,56 @@
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="l8T-36-HVU" id="F3o-w3-i6B"/>
-                        <outlet property="leftBarButtonItem" destination="1aT-u7-dNp" id="QYU-bW-ZhP"/>
                         <outlet property="mainView" destination="XVC-u6-RI5" id="E4x-l3-JSl"/>
                         <outlet property="topStackView" destination="SXT-vT-72e" id="rmQ-GV-huz"/>
+                        <segue destination="BKE-sO-MWd" kind="presentation" identifier="datingDetailSegue" customClass="DatingDetailSeque" customModule="Dribbble_Project" customModuleProvider="target" modalPresentationStyle="fullScreen" id="Lnl-XO-q8N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="898.47328244274809" y="-27.464788732394368"/>
+        </scene>
+        <!--Dating Detail View Controller-->
+        <scene sceneID="0tP-oR-XQq">
+            <objects>
+                <viewController storyboardIdentifier="DatingDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BKE-sO-MWd" customClass="DatingDetailViewController" customModule="Dribbble_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pIK-pt-q4Q">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="weX-BB-iAj" customClass="UIButtonX" customModule="Dribbble_Project" customModuleProvider="target">
+                                <rect key="frame" x="50" y="109" width="30" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="h0k-OU-aMk"/>
+                                    <constraint firstAttribute="height" constant="30" id="yml-X8-vbp"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="chevron.backward" catalog="system" symbolScale="small"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="closePressed" destination="BKE-sO-MWd" eventType="touchUpInside" id="qu9-Fa-9aZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qIm-og-EVz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="weX-BB-iAj" firstAttribute="leading" secondItem="qIm-og-EVz" secondAttribute="leading" constant="50" id="hRz-wR-4TR"/>
+                            <constraint firstItem="weX-BB-iAj" firstAttribute="top" secondItem="qIm-og-EVz" secondAttribute="top" constant="50" id="j2B-i7-lbP"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zxN-UY-5jX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1816" y="-27"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kqC-TV-oUe">
@@ -209,10 +252,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="heart.fill" catalog="system" width="128" height="107"/>
-        <image name="line.3.horizontal.decrease" catalog="system" width="128" height="73"/>
         <image name="person0" width="4912" height="7360"/>
         <image name="text.bubble.fill.rtl" catalog="system" width="128" height="110"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

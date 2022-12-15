@@ -8,7 +8,6 @@
 import UIKit
 
 class DatingViewController: UIViewController {
-    @IBOutlet weak var leftBarButtonItem: UIBarButtonItem!
     @IBOutlet weak var topStackView: UIStackView!
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var imageView: UIImageView!
@@ -23,14 +22,34 @@ class DatingViewController: UIViewController {
         configureSnapView(item: imageView)
     }
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+    
+    var menuItems: [UIAction] {
+        return [
+            UIAction(title: "Profile", image: UIImage(systemName: "sun.max"), handler: { (_) in
+            }),
+            UIAction(title: "Settings", image: UIImage(systemName: "moon"), attributes: .disabled, handler: { (_) in
+            }),
+            UIAction(title: "Delete", image: UIImage(systemName: "trash"), attributes: .destructive, handler: { (_) in
+            })
+        ]
+    }
+
+    var barButtonMenu: UIMenu {
+        return UIMenu(title: "Main Menu", image: nil, identifier: nil, options: [], children: menuItems)
+    }
+    
     private func configureView() {
-        let leftBarButton = UIButton(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
         let leftBarImage = UIImage(systemName: "line.3.horizontal.decrease")
-        leftBarButton.tintColor = UIColor.white
-        leftBarButton.setImage(leftBarImage, for: .normal)
-        leftBarButton.layer.cornerRadius = 5
-        leftBarButton.backgroundColor = UIColor.gray
-        leftBarButtonItem.customView = leftBarButton
+        let barImageView = UIImageView(image: leftBarImage)
+        barImageView.tintColor = UIColor.white
+        
+        let barButtonItem = UIBarButtonItem(title: "Menu", image: leftBarImage, primaryAction: nil, menu: barButtonMenu)
+        barButtonItem.tintColor = UIColor.white
+        
+        navigationItem.leftBarButtonItem = barButtonItem
         
         layer.backgroundColor = UIColor.white.cgColor
         topStackView.layer.addSublayer(layer)
@@ -48,6 +67,9 @@ class DatingViewController: UIViewController {
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panned))
         item.addGestureRecognizer(panGesture)
         item.isUserInteractionEnabled = true
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapped))
+        item.addGestureRecognizer(tapGesture)
     }
 
     var swiped: Bool = false
@@ -96,6 +118,10 @@ class DatingViewController: UIViewController {
         }
     }
     
+    @objc func tapped(_ recognizer: UITapGestureRecognizer) {
+        performSegue(withIdentifier: SegueModel.datingDetail, sender: self)
+    }
+    
     private func replaceImage() {
         personCount = (personCount + 1) % 3
         let imageView = UIImageView(image: UIImage(named: "person\(personCount)"))
@@ -127,4 +153,10 @@ class DatingViewController: UIViewController {
     @IBAction func topButtonPressed(_ sender: UIButton) {
         layer.position = CGPoint(x: sender.center.x, y: sender.center.y + 30)
     }
+    
+    @IBAction func bottomXpressed(_ sender: UIButton) {
+        replaceImage()
+    }
+    
+    
 }
