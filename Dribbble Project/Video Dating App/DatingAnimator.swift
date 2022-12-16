@@ -17,30 +17,33 @@ extension DatingAnimator: UIViewControllerAnimatedTransitioning {
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        guard let fromView = transitionContext.view(forKey: .from),
-              let toView = transitionContext.view(forKey: .to),
+        guard let toView = transitionContext.view(forKey: .to),
               let navController = transitionContext.viewController(forKey: .from) as? UINavigationController,
               let fromVC = navController.topViewController as? DatingViewController,
+              let imageView = fromVC.imageView,
               let toVC = transitionContext.viewController(forKey: .to) as? DatingDetailViewController else {
             transitionContext.completeTransition(false)
             return
         }
         
-        transitionContext.containerView.addSubview(toView)
-        toView.frame = fromView.frame
-        toView.alpha = 0
-        toView.layoutIfNeeded()
+        let containerView = transitionContext.containerView
+        let originalFrame = imageView.superview?.convert(imageView.frame, to: nil)
         
-        let imageView = fromVC.imageView
+        containerView.addSubview(toView)
+        containerView.addSubview(imageView)
+        imageView.contentMode = .scaleAspectFill
+        imageView.frame = originalFrame!
+        
         let finalFrame = transitionContext.finalFrame(for: toVC)
         let duration = transitionDuration(using: transitionContext)
+        
+        toView.transform = CGAffineTransform(scaleX: 0, y: 0)
 
-        UIView.animate(withDuration: duration, delay: 0.0, options: .curveEaseInOut, animations: {
-            imageView?.frame = finalFrame
-            
-            toView.frame = finalFrame
-            toView.alpha = 1
+        UIView.animate(withDuration: duration, delay: 0.0, options: .curveEaseOut, animations: {
+            imageView.frame = finalFrame
+            toView.transform = CGAffineTransform(scaleX: 1, y: 1)
         }, completion: { success in
+            imageView.alpha = 0
             transitionContext.completeTransition(success && !transitionContext.transitionWasCancelled)
         })
     }

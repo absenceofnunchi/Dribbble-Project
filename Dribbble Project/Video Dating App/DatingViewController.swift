@@ -118,8 +118,21 @@ class DatingViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == SegueModel.datingDetail,
+              let vc = segue.destination as? DatingDetailViewController else {
+            return
+        }
+        
+        let imageView = UIImageView(image: UIImage(named: "person\(personCount)"))
+        imageView.contentMode = .scaleAspectFill
+        vc.view.addSubview(imageView)
+        vc.view.sendSubviewToBack(imageView)
+        imageView.frame = vc.view.bounds    }
+    
     @objc func tapped(_ recognizer: UITapGestureRecognizer) {
         performSegue(withIdentifier: SegueModel.datingDetail, sender: self)
+
     }
     
     private func replaceImage() {
@@ -157,6 +170,4 @@ class DatingViewController: UIViewController {
     @IBAction func bottomXpressed(_ sender: UIButton) {
         replaceImage()
     }
-    
-    
 }
