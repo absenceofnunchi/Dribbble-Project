@@ -10,16 +10,37 @@ import UIKit
 class DatingViewController: UIViewController {
     @IBOutlet weak var topStackView: UIStackView!
     @IBOutlet weak var mainView: UIView!
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var userInfoView: UserInfoWrapperView!
+    private var dataSource: [DatingUserModel] = []
     private var animator: UIDynamicAnimator!
     private var snapping: UISnapBehavior!
     private let layer = CALayer()
     private var personCount: Int = 0
+    private var swiped: Bool = false
+    private var viewModel = DatingUserViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureData()
         configureView()
-        configureSnapView(item: imageView)
+        guard let userInfo = dataSource.first else { return }
+        setUserInfo(userInfo: userInfo, userInfoView: userInfoView.contentView)
+        
+//        let textField = UINib(nibName: "\(self)", bundle: nil).instantiate(withOwner: nil, options: nil)[1] as? UILabel
+
+//        configureSnapView(item: userInfoView)
+        
+    }
+    
+    @discardableResult
+    private func setUserInfo(userInfo: DatingUserModel, userInfoView: UserInfoView) -> UserInfoView {
+        userInfoView.locationLabel.text = userInfo.location
+        userInfoView.nameLabel.text = userInfo.name
+        userInfoView.ageLabel.text = "\(userInfo.age)"
+        userInfoView.image = userInfo.image
+        userInfoView.layer.cornerRadius = 20
+        userInfoView.clipsToBounds = true
+        return userInfoView
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -36,7 +57,7 @@ class DatingViewController: UIViewController {
             })
         ]
     }
-
+    
     var barButtonMenu: UIMenu {
         return UIMenu(title: "Main Menu", image: nil, identifier: nil, options: [], children: menuItems)
     }
@@ -58,8 +79,8 @@ class DatingViewController: UIViewController {
         layer.position = CGPoint(x: firstButton.center.x, y: firstButton.center.y + 30)
     }
     
-    private func configureSnapView(item: UIImageView) {
-        imageView = item
+    private func configureSnapView(item: UserInfoView) {
+        userInfoView.contentView = item
         animator = UIDynamicAnimator(referenceView: view)
         snapping = UISnapBehavior(item: item, snapTo: mainView.center)
         animator.addBehavior(snapping)
@@ -71,31 +92,42 @@ class DatingViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapped))
         item.addGestureRecognizer(tapGesture)
     }
-
-    var swiped: Bool = false
+    
+    private func configureData() {
+        viewModel.users.bind { _ in
+            
+        }
+        
+        dataSource = [
+            DatingUserModel(name: "Erin Vetroves", age: 27, location: "New York / USA", tags: ["#trovel", "#fashion", "#nature"], image: UIImage(named: "person0")!),
+            DatingUserModel(name: "Erin Vetroves", age: 27, location: "New York / USA", tags: ["#trovel", "#fashion", "#nature"], image: UIImage(named: "person1")!),
+            DatingUserModel(name: "Erin Vetroves", age: 27, location: "New York / USA", tags: ["#trovel", "#fashion", "#nature"], image: UIImage(named: "person2")!),
+        ]
+    }
+    
     @objc func panned(recognizer: UIPanGestureRecognizer) {
-        let rightGap = abs(view.bounds.maxX - imageView.center.x)
-        let leftGap = imageView.center.x
+        let rightGap = abs(view.bounds.maxX - userInfoView.center.x)
+        let leftGap = userInfoView.center.x
         
         switch recognizer.state {
         case .began:
             animator.removeBehavior(snapping)
         case .changed:
             let translation = recognizer.translation(in: mainView)
-            imageView.center = CGPoint(x: imageView.center.x + translation.x, y: imageView.center.y)
+            userInfoView.center = CGPoint(x: userInfoView.center.x + translation.x, y: userInfoView.center.y)
             
-            let normalized = (imageView.center.x - mainView.center.x) / 10
-            imageView.transform = CGAffineTransform(rotationAngle: normalized / 180 * CGFloat.pi)
+            let normalized = (userInfoView.center.x - mainView.center.x) / 10
+            userInfoView.transform = CGAffineTransform(rotationAngle: normalized / 180 * CGFloat.pi)
             
             if leftGap < 20 || rightGap < 20 {
                 animator.removeBehavior(snapping)
                 
                 UIView.animate(withDuration: 0.1, delay: 0.0, options: .curveEaseInOut, animations: { [weak self] in
-                    self?.imageView.alpha = 0
-                    }, completion: { [weak self] finished in
-                        guard finished else { return }
-                        self?.imageView.removeFromSuperview()
-                    }
+                    self?.userInfoView.alpha = 0
+                }, completion: { [weak self] finished in
+                    guard finished else { return }
+                    self?.userInfoView.removeFromSuperview()
+                }
                 )
                 self.swiped = true
             } else {
@@ -109,7 +141,7 @@ class DatingViewController: UIViewController {
             } else {
                 animator.addBehavior(snapping)
             }
-         
+            
             swiped = false
         case .possible:
             break
@@ -124,26 +156,26 @@ class DatingViewController: UIViewController {
             return
         }
         
-        let imageView = UIImageView(image: UIImage(named: "person\(personCount)"))
-        imageView.contentMode = .scaleAspectFill
-        vc.view.addSubview(imageView)
-        vc.view.sendSubviewToBack(imageView)
-        imageView.frame = vc.view.bounds    }
+        let userInfoView = UserInfoView(image: UIImage(named: "person\(personCount)"))
+        userInfoView.contentMode = .scaleAspectFill
+        vc.view.addSubview(userInfoView)
+        vc.view.sendSubviewToBack(userInfoView)
+        userInfoView.frame = vc.view.bounds
+    }
     
     @objc func tapped(_ recognizer: UITapGestureRecognizer) {
         performSegue(withIdentifier: SegueModel.datingDetail, sender: self)
-
     }
     
     private func replaceImage() {
         personCount = (personCount + 1) % 3
-        let imageView = UIImageView(image: UIImage(named: "person\(personCount)"))
-        imageView.alpha = 0
-        imageView.layer.cornerRadius = 20
-        imageView.clipsToBounds = true
-        imageView.frame = CGRect(origin: CGPoint(x: 20, y: 20), size: CGSize(width: mainView.bounds.width - 40, height: mainView.bounds.height - 40))
-        mainView.addSubview(imageView)
-        imageView.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+        let userInfoView = UserInfoView(image: UIImage(named: "person\(personCount)"))
+        userInfoView.alpha = 0
+        userInfoView.layer.cornerRadius = 20
+        userInfoView.clipsToBounds = true
+        userInfoView.frame = CGRect(origin: CGPoint(x: 20, y: 20), size: CGSize(width: mainView.bounds.width - 40, height: mainView.bounds.height - 40))
+        mainView.addSubview(userInfoView)
+        userInfoView.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
         
         UIView.animate(withDuration: 0.3,
                        delay: 0.0,
@@ -151,12 +183,19 @@ class DatingViewController: UIViewController {
                        initialSpringVelocity: CGFloat(1.0),
                        options: [.allowUserInteraction],
                        animations: {
-            imageView.alpha = 1
-            imageView.transform = .identity
+            userInfoView.alpha = 1
+            userInfoView.transform = .identity
         })
         
-        self.imageView = imageView
-        configureSnapView(item: imageView)
+        self.userInfoView.contentView = userInfoView
+        configureSnapView(item: userInfoView)
+    }
+    
+    private func configureUserInfoView(userInfo: DatingUserModel) {
+        let userInfoView = UserInfoView.loadViewFromNib()
+        userInfoView.frame = CGRect(origin: CGPoint(x: 20, y: 20), size: CGSize(width: mainView.bounds.width - 40, height: mainView.bounds.height - 40))
+        mainView.addSubview(userInfoView)
+        setUserInfo(userInfo: userInfo, userInfoView: userInfoView)
     }
     
     @IBAction func closeButtonPressed() {
@@ -168,6 +207,7 @@ class DatingViewController: UIViewController {
     }
     
     @IBAction func bottomXpressed(_ sender: UIButton) {
+        userInfoView?.removeFromSuperview()
         replaceImage()
     }
 }

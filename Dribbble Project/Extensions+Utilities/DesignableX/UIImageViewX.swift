@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class UIImageViewX: UIImageView {
+class UIImageViewX: UIImageView {
     
     // MARK: - Gradient
     
@@ -65,6 +65,7 @@ final class UIImageViewX: UIImageView {
     @IBInspectable public var cornerRadius: CGFloat = 0 {
         didSet {
             layer.cornerRadius = cornerRadius
+            layer.masksToBounds = cornerRadius > 0
         }
     }
     

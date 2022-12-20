@@ -20,7 +20,7 @@ extension DatingAnimator: UIViewControllerAnimatedTransitioning {
         guard let toView = transitionContext.view(forKey: .to),
               let navController = transitionContext.viewController(forKey: .from) as? UINavigationController,
               let fromVC = navController.topViewController as? DatingViewController,
-              let imageView = fromVC.imageView,
+              let imageView = fromVC.userInfoView,
               let toVC = transitionContext.viewController(forKey: .to) as? DatingDetailViewController else {
             transitionContext.completeTransition(false)
             return
