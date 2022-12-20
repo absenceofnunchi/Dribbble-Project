@@ -33,9 +33,17 @@
 		0FE5CBD72814852500F02874 /* lottie-phone-json.json in Resources */ = {isa = PBXBuildFile; fileRef = 0FE5CBD62814852500F02874 /* lottie-phone-json.json */; };
 		0FFD364528172CB2009F962E /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD364428172CB2009F962E /* ProgressView.swift */; };
 		1F1934F92944BD1400F6984C /* UIViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1934F82944BD1400F6984C /* UIViewX.swift */; };
+		1F200F8B294DF954002BA70F /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F200F8A294DF954002BA70F /* Observable.swift */; };
+		1F200F8D294DF9F4002BA70F /* DatingUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F200F8C294DF9F4002BA70F /* DatingUserModel.swift */; };
+		1F200F97294E10D8002BA70F /* UserInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F200F96294E10D8002BA70F /* UserInfoView.xib */; };
+		1F200F99294E1531002BA70F /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F200F98294E1531002BA70F /* UserInfoView.swift */; };
 		1F2385DD29494F480064B172 /* UIImageViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2385DC29494F480064B172 /* UIImageViewX.swift */; };
 		1F45911D2948446500AF1D17 /* DatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F45911B2948446500AF1D17 /* DatingViewController.swift */; };
 		1F45911E2948446500AF1D17 /* DatingMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F45911C2948446500AF1D17 /* DatingMain.storyboard */; };
+		1F69F92E294ABDF50056BFAD /* UIButtonX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F69F92D294ABDF50056BFAD /* UIButtonX.swift */; };
+		1F69F930294AC0440056BFAD /* DatingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F69F92F294AC0440056BFAD /* DatingDetailViewController.swift */; };
+		1F69F934294AC1020056BFAD /* DatingDetailSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F69F933294AC1020056BFAD /* DatingDetailSegue.swift */; };
+		1F69F936294AC1C00056BFAD /* DatingAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F69F935294AC1C00056BFAD /* DatingAnimator.swift */; };
 		1F7B026B29468D0800905B3E /* UILabelX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7B026A29468D0800905B3E /* UILabelX.swift */; };
 		1FA126E52944279C00225946 /* WellnessMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FA126E42944279C00225946 /* WellnessMain.storyboard */; };
 		1FA126E82944309A00225946 /* WellnessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA126E72944309A00225946 /* WellnessViewController.swift */; };
@@ -75,9 +83,17 @@
 		0FE5CBD62814852500F02874 /* lottie-phone-json.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "lottie-phone-json.json"; sourceTree = "<group>"; };
 		0FFD364428172CB2009F962E /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		1F1934F82944BD1400F6984C /* UIViewX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewX.swift; sourceTree = "<group>"; };
+		1F200F8A294DF954002BA70F /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		1F200F8C294DF9F4002BA70F /* DatingUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatingUserModel.swift; sourceTree = "<group>"; };
+		1F200F96294E10D8002BA70F /* UserInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInfoView.xib; sourceTree = "<group>"; };
+		1F200F98294E1531002BA70F /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
 		1F2385DC29494F480064B172 /* UIImageViewX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewX.swift; sourceTree = "<group>"; };
 		1F45911B2948446500AF1D17 /* DatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatingViewController.swift; sourceTree = "<group>"; };
 		1F45911C2948446500AF1D17 /* DatingMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DatingMain.storyboard; sourceTree = "<group>"; };
+		1F69F92D294ABDF50056BFAD /* UIButtonX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonX.swift; sourceTree = "<group>"; };
+		1F69F92F294AC0440056BFAD /* DatingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatingDetailViewController.swift; sourceTree = "<group>"; };
+		1F69F933294AC1020056BFAD /* DatingDetailSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatingDetailSegue.swift; sourceTree = "<group>"; };
+		1F69F935294AC1C00056BFAD /* DatingAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatingAnimator.swift; sourceTree = "<group>"; };
 		1F7B026A29468D0800905B3E /* UILabelX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelX.swift; sourceTree = "<group>"; };
 		1FA126E42944279C00225946 /* WellnessMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WellnessMain.storyboard; sourceTree = "<group>"; };
 		1FA126E72944309A00225946 /* WellnessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellnessViewController.swift; sourceTree = "<group>"; };
@@ -236,6 +252,7 @@
 				1FBEE02A29468129001DA61A /* UIStackViewX.swift */,
 				1F7B026A29468D0800905B3E /* UILabelX.swift */,
 				1F2385DC29494F480064B172 /* UIImageViewX.swift */,
+				1F69F92D294ABDF50056BFAD /* UIButtonX.swift */,
 			);
 			path = DesignableX;
 			sourceTree = "<group>";
@@ -245,6 +262,13 @@
 			children = (
 				1F45911B2948446500AF1D17 /* DatingViewController.swift */,
 				1F45911C2948446500AF1D17 /* DatingMain.storyboard */,
+				1F69F92F294AC0440056BFAD /* DatingDetailViewController.swift */,
+				1F69F933294AC1020056BFAD /* DatingDetailSegue.swift */,
+				1F69F935294AC1C00056BFAD /* DatingAnimator.swift */,
+				1F200F8A294DF954002BA70F /* Observable.swift */,
+				1F200F8C294DF9F4002BA70F /* DatingUserModel.swift */,
+				1F200F96294E10D8002BA70F /* UserInfoView.xib */,
+				1F200F98294E1531002BA70F /* UserInfoView.swift */,
 			);
 			path = "Video Dating App";
 			sourceTree = "<group>";
@@ -347,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FC47D6E2814411C00D9999B /* LaunchScreen.storyboard in Resources */,
+				1F200F97294E10D8002BA70F /* UserInfoView.xib in Resources */,
 				0FE5CBD72814852500F02874 /* lottie-phone-json.json in Resources */,
 				1FBEE025294576AE001DA61A /* Employee.storyboard in Resources */,
 				0FC47D6B2814411C00D9999B /* Assets.xcassets in Resources */,
@@ -366,11 +391,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F8C43DA284CF22F00A438C4 /* CollectionViewable+Protocol.swift in Sources */,
+				1F69F936294AC1C00056BFAD /* DatingAnimator.swift in Sources */,
 				0F8D7FB728190359001D5533 /* CategoryCollectionViewCell.swift in Sources */,
 				1FBEE02B29468129001DA61A /* UIStackViewX.swift in Sources */,
 				0FC47D7B281445D800D9999B /* ViewModel.swift in Sources */,
 				1FA126E82944309A00225946 /* WellnessViewController.swift in Sources */,
 				1F2385DD29494F480064B172 /* UIImageViewX.swift in Sources */,
+				1F69F934294AC1020056BFAD /* DatingDetailSegue.swift in Sources */,
+				1F69F930294AC0440056BFAD /* DatingDetailViewController.swift in Sources */,
 				0FC47D802814615700D9999B /* SegueModel.swift in Sources */,
 				1F1934F92944BD1400F6984C /* UIViewX.swift in Sources */,
 				0FC540AE2818DB5F0037BA68 /* TaskCollectionViewCell.swift in Sources */,
@@ -381,13 +409,17 @@
 				0FC47D642814411300D9999B /* SceneDelegate.swift in Sources */,
 				0F6D5772284CF41A00E685F6 /* CalendarCollectionViewCell.swift in Sources */,
 				0FC47D8C28146DEF00D9999B /* View+Extensions.swift in Sources */,
+				1F200F8D294DF9F4002BA70F /* DatingUserModel.swift in Sources */,
 				0FC47D9628147F3200D9999B /* ViewControllerModel.swift in Sources */,
 				1FBEE02729457E6F001DA61A /* EmployeeSegue.swift in Sources */,
 				0FC47D9228147EC400D9999B /* TaskViewController.swift in Sources */,
+				1F200F8B294DF954002BA70F /* Observable.swift in Sources */,
 				1FBEE02929457F4F001DA61A /* EmployeeAnimator.swift in Sources */,
+				1F69F92E294ABDF50056BFAD /* UIButtonX.swift in Sources */,
 				0FC47D8E281470A900D9999B /* ResourceURL.swift in Sources */,
 				0FC47D9028147C5500D9999B /* CustomTabBarController.swift in Sources */,
 				1F7B026B29468D0800905B3E /* UILabelX.swift in Sources */,
+				1F200F99294E1531002BA70F /* UserInfoView.swift in Sources */,
 				1FBEE0232945769F001DA61A /* EmployeeViewController.swift in Sources */,
 				0F8D7FB52818FA52001D5533 /* TextCell.swift in Sources */,
 				0FFD364528172CB2009F962E /* ProgressView.swift in Sources */,

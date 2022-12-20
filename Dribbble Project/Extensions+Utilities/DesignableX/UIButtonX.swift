@@ -1,15 +1,13 @@
 //
-//  UIImageViewX.swift
+//  UIButtonX.swift
 //  Dribbble Project
 //
-//  Created by Jeff Choi on 2022-12-13.
+//  Created by Jeff Choi on 2022-12-14.
 //
 
 import UIKit
 
-class UIImageViewX: UIImageView {
-    
-    // MARK: - Gradient
+final class UIButtonX: UIButton {
     
     @IBInspectable var firstColor: UIColor = UIColor.white {
         didSet {
@@ -65,7 +63,6 @@ class UIImageViewX: UIImageView {
     @IBInspectable public var cornerRadius: CGFloat = 0 {
         didSet {
             layer.cornerRadius = cornerRadius
-            layer.masksToBounds = cornerRadius > 0
         }
     }
     
